@@ -1,9 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
-import { Button } from '@radix-ui/themes'
+import { Button, Flex } from '@radix-ui/themes'
+import IssueStatusFilter from '../issues/view/_components/IssueStatusFilter'
 const ActionButton = () => {
   return (
-   <Button asChild><Link href={`/issues/new`}>Add New Issue</Link></Button>
+    <Flex justify='between' align='center'>
+      <IssueStatusFilter />
+      <Button asChild><Link href={`/issues/new`}>Add New Issue</Link></Button>
+    </Flex>
+
   )
 }
 
