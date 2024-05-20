@@ -3,7 +3,7 @@ import { Badge } from '@radix-ui/themes'
 import { Status } from '@prisma/client'
 
 interface Props {
-    status:string
+    status:Status
 }
 
 const statusMap:Record<Status, {label:string, color:'red'|'green'|'orange'}> = {

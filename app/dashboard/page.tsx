@@ -4,7 +4,12 @@ import IssueSummary from './_components/IssueSummary'
 import { Grid, Flex } from '@radix-ui/themes'
 import IssueChart from './_components/IssueChart'
 import prisma from '@/prisma/client'
+import {Metadata} from 'next'
 
+export const metadata:Metadata ={
+title:'Issue Dashboard',
+description:"Issue dashboard, status card, status bar graph, latest issue"
+}
 
 const Dashboard = async() => {
   const open = await prisma.issue.count({where:{status:"OPEN"}})
